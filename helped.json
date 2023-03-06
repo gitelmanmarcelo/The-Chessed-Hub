@@ -1,0 +1,10 @@
+{
+    "name" : "John Travolta",
+    "email" : "johnt@gmail.com",
+    "address" : "flowers st, 2",
+    "city": "Los Angeles",
+    "country" : "USA",
+    "phone" : "11111111",
+    "username" : "jtravolta",
+    "password" : "1234"
+}

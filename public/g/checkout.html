@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=PT+Sans+Caption&family=Press+Start+2P&family=Roboto+Mono&family=Roboto:wght@400;500&family=Rubik&family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="checkout.css">
+    <title>Checkout</title>
+</head>
+<body>
+    <header>
+        <div class="header__container">
+          <div>
+            <div class="title"><p>The Chessed Hub</p></div>
+            <span class="mission"><p>Our mission is to help people in helping people</p></span>
+          </div>
+          <nav class="header__menu">
+            <ul class="menu__list">
+              <li class="meny__itemm">
+                <a href="../index.html" class="menu__link">Home</a>
+              </li>
+              <li class="meny__itemm">
+                <a href="../aboutus.html" class="menu__link">About Us</a>
+              </li>
+              <li class="meny__itemm">
+                <a href="login.html" class="menu__link">Donate</a>
+              </li>
+              <li class="meny__itemm">
+                <a href="../contact.html" class="menu__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <main>
+        <h1>Checkout</h1>
+        <h3>Do you want to send a motivation message to the person you are helping?</h3>
+        <h4>(maybe you can tell a bit about your life story...)</h4>
+        <form>
+            <textarea name="message" id="message" rows="4" cols="60"></textarea>
+        </form>
+        <h2>How do you want to pay?</h2>
+        <div id="payment">
+            <div id="payPal"><img src="img/paypal.png" alt=""></div>
+            <div id="creditCard"><img src="img/credit-cards.png" alt=""></div>
+            <div id="transfer"><img src="img/transfer.png" alt=""></div>
+        </div>
+        <form id="payPalForm" class="hidden">
+            <h2>PayPal</h2>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            <button id="payPalBtn">Pay</button>
+        </form>
+        <form id="creditCardForm" class="hidden">
+            <h2>CreditCard</h2>
+            <label for="name">Name on the card:</label>
+            <input type="text" name="name" id="name">
+            <label for="number">Card Number:</label>
+            <input type="text" name="number" id="number">
+            <label for="valid">Exp. Date:</label>
+            <input type="text" name="valid" id="valid">
+            <label for="code">Security Code:</label>
+            <input type="text" name="code" id="code">
+            <button id="creditCardBtn">Pay</button>
+        </form>
+        <div id="transferInfo" class="hidden">
+            <h2>Transfer</h2>
+            <p>The Chessed Hub</p>
+            <p>Bank abcd - 000</p>
+            <p>Account number: 5555</p>
+            <p>Please send a mail to donation@thechessedhub.com with the transfer receipt</p>
+            <button><a href="transfer-thanks.html">Finish</a></button>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="checkout.js"></script>
+</body>
+</html>
