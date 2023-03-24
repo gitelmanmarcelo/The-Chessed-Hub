@@ -69,7 +69,7 @@ const getStories = async () => {
 
 const toggleSort = async (e) => {
     let url;
-    if (e.currentTarget.querySelectorAll('p')[0].textContent === 'Date'){
+    if (e.currentTarget.querySelectorAll('p')[0].textContent === 'Date '){
         date_sort = (date_sort === 'asc' ? 'desc' : 'asc');    
         url = 'https://the-chessed-hub.onrender.com/s/sortedByDate?type=' + date_sort;
     } else {   // AMOUNT
