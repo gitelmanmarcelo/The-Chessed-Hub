@@ -2,10 +2,10 @@ const sendEmail2helped = async () => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const sid = urlParams.get('sid');
-    const url = 'http://localhost:5000/g/email'
+    const url = 'https://the-chessed-hub.onrender.com/g/email'
     let helped_email;
     try {
-        const result = await fetch('http://localhost:5000/s/hid/'+sid);
+        const result = await fetch('https://the-chessed-hub.onrender.com/s/hid/'+sid);
         if (!result.ok) {
             throw new Error("something is wrong")
         }
@@ -34,7 +34,7 @@ const completeDonation = async (e) => {
     const urlParams = new URLSearchParams(queryString);
     const gid = urlParams.get('gid');
     const sid = urlParams.get('sid');
-    const url = 'http://localhost:5000/s/complete'
+    const url = 'https://the-chessed-hub.onrender.com/s/complete'
     try {
         const result = await fetch(url, {
             method: 'POST',

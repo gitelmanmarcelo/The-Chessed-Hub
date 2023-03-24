@@ -11,7 +11,7 @@ const onFormSubmit = async (e) => {
     const urlParams = new URLSearchParams(queryString);
     const id = urlParams.get('id');
     formObj.helped_id = id;
-    const url = `http://localhost:5000/s/register`
+    const url = `https://the-chessed-hub.onrender.com/s/register`
     try {
         const result = await fetch(url, {
             method: 'POST',

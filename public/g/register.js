@@ -3,7 +3,7 @@ const onFormSubmit = async (e) => {
     const formData = new FormData(e.target)
     let formObj = Object.fromEntries(formData);
     console.log(formObj);
-    const url = `http://localhost:5000/g/register`
+    const url = `https://the-chessed-hub.onrender.com/g/register`
     try {
         const result = await fetch(url, {
             method: 'POST',
