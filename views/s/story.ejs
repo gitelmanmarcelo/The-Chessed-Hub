@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./shead'); %>
+    <link rel="stylesheet" href="story.css">
+    <title>Story</title>
+</head>
+<body style="background-image: url('./img/story-background.png')">
+  <%- include('./sheader'); %>
+    <main>
+        <h1>Tell us your story</h1>
+        <h3>(this story will be available to anyone who wishes to help to see.</h3>
+        <h3> If you want to stay anonymous do not include personnel info)</h3>
+        <form>
+            <textarea name="story" id="story" rows="8" cols="60"></textarea>
+            <div class="field" id="amountField">
+                <label for="amount">How much would help you?</label>
+                <input type="number" name="amount" id="amount">    
+            </div>
+            <button>Submit</button>
+        </form>
+    </main>
+<footer>
+</footer>
+<script type="module" src="story.js"></script>
+</body>
+</html>

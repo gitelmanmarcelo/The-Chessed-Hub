@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./ghead'); %>
+    <link rel="stylesheet" href="main.css">
+    <title>Main Screen</title>
+</head>
+  <body style="background-image: url('./img/main-background.png');">
+      <%- include('./gheader'); %>
+      <main>
+        <h1>Welcome <span id="giverName">name</span>!</h1>
+        <h2>May god bless you for your act !</h2>
+        <h3>Here is a list of stories of people you can help:</h3>
+        <div id="stories">
+            <div class="rowDiv tableHead">
+                <div><p></p></div>
+                <div id="dateCol"><p>Date <i class="fa-solid fa-sort"></i></p></div>
+                <div><p>Story</p></div>
+                <div id="amountCol"><p>Amount <i class="fa-solid fa-sort"></i></p></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

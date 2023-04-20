@@ -14,7 +14,65 @@ app.use(cors());
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
-app.use('/',express.static(__dirname + '/public'));
+app.use('/',express.static(__dirname+'/views'));
+
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res) => {
+    res.render('index');
+  });
+
+app.get('/index.html', (req, res) => {
+    res.render('index');
+  });
+
+  app.get('/login.html', (req, res) => {
+    res.render('login');
+  });
+
+  app.get('/register.html', (req, res) => {
+    res.render('register');
+  });
+
+  app.get('/s/story.html', (req, res) => {
+    res.render('./s/story');
+  });
+
+  app.get('/s/success.html', (req, res) => {
+    res.render('./s/success');
+  });
+
+  app.get('/g/login.html', (req, res) => {
+    res.render('./g/login');
+  });
+
+  app.get('/g/register.html', (req, res) => {
+    res.render('./g/register');
+  });
+
+  app.get('/g/main.html', (req, res) => {
+    res.render('./g/main');
+  });
+
+  app.get('/g/checkout.html', (req, res) => {
+    res.render('./g/checkout');
+  });
+
+  app.get('/g/thanks.html', (req, res) => {
+    res.render('./g/thanks');
+  });
+
+  app.get('/g/transfer-thanks.html', (req, res) => {
+    res.render('./g/transfer-thanks');
+  });
+
+  app.get('/contact.html', (req, res) => {
+    res.render('./contact');
+  });
+
+  app.get('/aboutus.html', (req, res) => {
+    res.render('./aboutus');
+  });
 
 app.listen(process.env.PORT, () => { console.log('run on port '+ process.env.PORT)});
 

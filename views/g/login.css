@@ -1,0 +1,43 @@
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #407cd5;
+}
+
+#container, form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+
+#container {
+    height: 50vh;
+}
+
+form {
+    height: 40vh;
+}
+
+#submitBtn, #container input {
+    color: #407cd5;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 1px solid #407cd5;
+    padding: 16px;
+}
+
+#container p, #container p a {
+    color: #407cd5;
+    font-size: 1.2rem;
+}
+
+#submitBtn {
+    border-radius: 10px;
+    border: 1px solid #407cd5;
+}

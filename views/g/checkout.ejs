@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./ghead'); %>
+    <link rel="stylesheet" href="checkout.css">
+    <title>Checkout</title>
+</head>
+    <body style="background-image: url('./img/index-background.png');">
+      <%- include('./gheader'); %>
+      <main>
+        <h1>Checkout</h1>
+        <h3>Do you want to send a motivation message to the person you are helping?</h3>
+        <h4>(maybe you can tell a bit about your life story...)</h4>
+        <form>
+            <textarea name="message" id="message" rows="4" cols="60"></textarea>
+        </form>
+        <h2>How do you want to pay?</h2>
+        <div id="payment">
+            <div id="payPal"><img src="img/paypal.png" alt=""></div>
+            <div id="creditCard"><img src="img/credit-cards.png" alt=""></div>
+            <div id="transfer"><img src="img/transfer.png" alt=""></div>
+        </div>
+        <form id="payPalForm" class="hidden">
+            <h2>PayPal</h2>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            <button id="payPalBtn">Pay</button>
+        </form>
+        <form id="creditCardForm" class="hidden">
+            <h2>CreditCard</h2>
+            <label for="name">Name on the card:</label>
+            <input type="text" name="name" id="name">
+            <label for="number">Card Number:</label>
+            <input type="text" name="number" id="number">
+            <label for="valid">Exp. Date:</label>
+            <input type="text" name="valid" id="valid">
+            <label for="code">Security Code:</label>
+            <input type="text" name="code" id="code">
+            <button id="creditCardBtn">Pay</button>
+        </form>
+        <div id="transferInfo" class="hidden">
+            <h2>Transfer</h2>
+            <p>The Chessed Hub</p>
+            <p>Bank abcd - 000</p>
+            <p>Account number: 5555</p>
+            <p>Please send a mail to donation@thechessedhub.com with the transfer receipt</p>
+            <button><a href="transfer-thanks.html">Finish</a></button>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script type="module" src="checkout.js"></script>
+</body>
+</html>
