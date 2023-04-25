@@ -10,8 +10,7 @@ main {
 main button {
     font-size: 1.5rem;
     border-radius: 20px;
-    height: 20vh;
-    width: 30vw;
+    width: 200px;
     border: none;
     background-color: transparent;
 }

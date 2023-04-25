@@ -3,7 +3,6 @@ main {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     color: #407cd5;
 }
@@ -11,49 +10,28 @@ main {
 #container, form {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: 1.5rem;
 }
 
 #container {
-    margin-top: 10vh;
+    margin-top: 20vh;
     height: 70vh;
 }
 
+
 form {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    height: 55vh;
     width: 100vw;
 }
 
 form div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
-}
-
-form div div {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    
-}
-
-
-form input {
-    width: 32vw;
-}
-
-.fieldCol {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
 }
 
 .field {
@@ -68,11 +46,18 @@ form input {
     color: black;
 }
 
-#submitBtn, #container input {
+ #container input {
+    width: 350px;
+    height: 1.4rem;
     color: #407cd5;
     font-size: 1.2rem;
     border-radius: 10px;
     border: 1px solid #407cd5;
+    padding: 16px;
+}
+
+#submitBtn {
+    color: #407cd5;
     padding: 16px;
 }
 
@@ -82,7 +67,32 @@ form input {
 }
 
 #submitBtn {
+    margin: 40px 0px;
     border-radius: 10px;
     border: 1px solid #407cd5;
 }
 
+@media screen and (max-width: 1050px) {
+
+    form label {
+        color: black;
+    }
+
+    form div {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+    .field {
+        flex-direction: column;
+    }
+
+    
+    body {
+        background-size:initial;
+    }
+}

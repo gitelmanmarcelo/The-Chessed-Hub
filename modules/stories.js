@@ -8,7 +8,6 @@ const getHelpedEmail = (story_id) => {
 } 
 
 const getSortedByAmount = (type) => {
-    console.log('amount')
         return db('stories')
         .select('story_id','creation_date','story','amount')
         .whereNull('giver_id')

@@ -1,15 +1,18 @@
 main {
     margin-top: 20vh;
     height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 main h1, main h2, main h3, main h4, main p, label {
-    margin-bottom: 16px;
     color: #407cd5;
+    text-align: center;
+}
+
+main h1, main h2, main h3, main h4, main p {
+margin-bottom: 16px;
 }
 
 h2 {
@@ -33,17 +36,71 @@ textarea {
     border-radius: 10px;
 }
 
-#payment {
-    display: flex;
-    width: 40vw;
-    justify-content: space-between;
-}
-
 #payment div {
     display: flex;
-    height: 10vh;
+    gap: 20px;
+}
+
+#payment img {
+    height: 50px;
+}
+
+#payment {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 30px;
 }
 
 .hidden {
-    display: none;
+    display: none !important;
+}
+
+#creditCardForm div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+#creditCardForm div div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#creditCardForm  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#creditCardForm button {
+    margin-top: 10px;
+}
+
+#transferInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    #payment {
+        grid-template-columns: 1fr;
+    }
+
+
+    #creditCardForm div {
+        grid-template-columns: 1fr;
+    }
+
+    #transferInfo button, #creditCardForm button {
+        margin-bottom: 20vh;
+    }
+
+    
+
+
 }

@@ -16,6 +16,7 @@ main h3, main h1 {
 
 form {
   height: 100%;
+  width: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -29,7 +30,7 @@ form {
 }
 
 #amountField {
-  width: 28vw;
+  width:400px;
 }
 
 form textarea, form input {
@@ -44,4 +45,41 @@ form button {
     border-radius: 10px;
     border: 1px solid #407cd5;
     padding: 16px;
+}
+
+form label {
+  width: 400px;
+  text-align: right;
+}
+
+#amount {
+  height: 1.5rem;
+  width: 120px;
+}
+
+#overlay {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+
+  #overlay {
+    z-index: -1;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255,255,255,60%);
+  }
+
+  form textarea, form input, form label {
+    font-size: 1rem;
+  }
+
+  main h3, main h1 {
+    font-size: 1rem;
+  }
+
 }

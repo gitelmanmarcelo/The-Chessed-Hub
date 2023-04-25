@@ -1,4 +1,4 @@
-import { urlServer } from '../urlServer.js';
+import { urlServer } from '../js/urlServer.js';
 
 const onFormSubmit = async (e) => {
     e.preventDefault()

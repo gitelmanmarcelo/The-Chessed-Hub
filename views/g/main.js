@@ -45,6 +45,7 @@ const getStories = async () => {
             const data = await result.json();
             data.forEach(story => {
                 const div = document.createElement('div');
+                const span = document.createElement('span');
                 div.classList.add('rowDiv');
                 div.appendChild(addStoryDiv(story.story_id,'hidden'));
                 const date = story.creation_date.slice(8,10) + '/' + story.creation_date.slice(5,7) + '/' + story.creation_date.slice(0,4);
@@ -52,7 +53,11 @@ const getStories = async () => {
                 div.appendChild(addStoryDiv(story.story));
                 div.appendChild(addStoryDiv(story.amount));
                 const btn = document.createElement('button');
-                const tnode = document.createTextNode('<- Select');
+                const tnode1 = document.createTextNode('<- ');
+                span.appendChild(tnode1);
+                span.classList.add("showLarge");
+                const tnode = document.createTextNode('Select');
+                btn.appendChild(span);
                 btn.appendChild(tnode);
                 const btnDiv = document.createElement('div');
                 btnDiv.appendChild(btn);
@@ -71,7 +76,14 @@ const getStories = async () => {
 
 const toggleSort = async (e) => {
     let url;
-    if (e.currentTarget.querySelectorAll('p')[0].textContent === 'Date '){
+    if (e.currentTarget.id === 'sortDateBtn') {
+        date_sort = (date_sort === 'asc' ? 'desc' : 'asc');    
+        url = urlServer + '/s/sortedByDate?type=' + date_sort;
+    } else if (e.currentTarget.id === 'sortAmntBtn') {
+        amount_sort = (amount_sort === 'asc' ? 'desc' : 'asc');    
+        url = urlServer + '/s/sortedByAmount?type=' + amount_sort;
+    }
+    else if (e.currentTarget.querySelectorAll('p')[0].textContent === 'Date '){
         date_sort = (date_sort === 'asc' ? 'desc' : 'asc');    
         url = urlServer + '/s/sortedByDate?type=' + date_sort;
     } else {   // AMOUNT
@@ -88,6 +100,7 @@ const toggleSort = async (e) => {
             const data = await result.json();
             data.forEach(story => {
                 const div = document.createElement('div');
+                const span = document.createElement('span');
                 div.classList.add('rowDiv');
                 div.appendChild(addStoryDiv(story.story_id,'hidden'));
                 const date = story.creation_date.slice(8,10) + '/' + story.creation_date.slice(5,7) + '/' + story.creation_date.slice(0,4);
@@ -95,7 +108,11 @@ const toggleSort = async (e) => {
                 div.appendChild(addStoryDiv(story.story));
                 div.appendChild(addStoryDiv(story.amount));
                 const btn = document.createElement('button');
-                const tnode = document.createTextNode('<- Select');
+                const tnode1 = document.createTextNode('<- ');
+                span.appendChild(tnode1);
+                span.classList.add("showLarge");
+                const tnode = document.createTextNode('Select');
+                btn.appendChild(span);
                 btn.appendChild(tnode);
                 const btnDiv = document.createElement('div');
                 btnDiv.appendChild(btn);
@@ -118,6 +135,8 @@ let amount_sort = 'asc';
 
 document.querySelector('#dateCol').addEventListener('click',toggleSort);
 document.querySelector('#amountCol').addEventListener('click',toggleSort);
+document.querySelector('#sortDateBtn').addEventListener('click',toggleSort);
+document.querySelector('#sortAmntBtn').addEventListener('click',toggleSort);
 
 setName();
 getStories();
